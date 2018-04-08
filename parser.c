@@ -714,8 +714,7 @@ static void expression(int level)
             }
             else if (token == Inc || token == Dec) {
                 // postfix inc(++) and dec(--)
-                // we will increase the value to the variable and decrease it
-                // on `ax` to get its original value.
+                // 注意: 浮点数是不支持++或--操作的
                 if (*text == LI) {
                     *text = PUSH;
                     *++text = LI;
@@ -735,10 +734,7 @@ static void expression(int level)
                 *++text = (token == Inc) ? ADD : SUB;
                 //SC store char; SI store int
                 *++text = (expr_type == CHAR) ? SC : SI;
-                *++text = PUSH;
-                *++text = IMM;
-                *++text = (expr_type > PTR) ? sizeof(int) : sizeof(char);
-                *++text = (token == Inc) ? SUB : ADD;
+
                 match(token);
             }
 
