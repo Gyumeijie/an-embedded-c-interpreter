@@ -1,7 +1,5 @@
-# an-embedded-c-interpreter
-A very simple interpreter for C, inspired by [c4](https://github.com/rswier/c4). By it's very name, we can use this
-embedded interpreter to interpret and run a c-like code sinppet which, more often than not, is used to configure the main
-program, and in the form of sole xml-file.
+# introduction
+This is a very simple interpreter for c-like code, inspired by [c4](https://github.com/rswier/c4). The key difference between c4 and this interpreter is the latter one is embedded, and by it's very name, we can use this embedded interpreter to interpret and run a c-like code sinppet which, more often than not, is used to configure the main program, and can take the form of sole xml-file or string.
 
 # components
 This tiny embedded c interpreter is mainly composed of four parts:
