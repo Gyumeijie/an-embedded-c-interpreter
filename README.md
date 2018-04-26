@@ -1,5 +1,7 @@
 # an-embedded-c-interpreter
-A very simple interpreter for C, inspired by [c4](https://github.com/rswier/c4)
+A very simple interpreter for C, inspired by [c4](https://github.com/rswier/c4). By it's very name, we can use this
+embedded interpreter to interpret and run a c-like code sinppet which, more often than not, is used to configure the main
+program, and in the form of sole xml-file.
 
 # components
 This tiny embedded c interpreter is mainly composed of four parts:
@@ -45,5 +47,13 @@ int* code = compile_src_code(dep_itemsp, src);
 ```c
 run_code(code);
 ```
+When excution is done, the ***result*** ,in the main program, will have a value of 6, given ***data*** is 1.
 
- When excution is done, the ***result*** ,in the main program, will have a value of 6, given ***data*** is 1.
+# todo 
+- [ ] redesign the APIs for more usablity.
+> Mainly center on seperating dependency variable info into two parts, the first part is static decalrative info 
+> including type and name of a dependency; And the second part is about the dynamic runtime info concerning address
+> of that dependency.
+- [ ] refactor code for more Maintainability.
+- [ ] support more grammar.
+- [ ] add safety check for accessing dependency variable(s) in code block.
