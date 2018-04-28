@@ -9,6 +9,10 @@ This tiny embedded c interpreter is mainly composed of four parts:
 - executor
 
 # usage
+Suppose a scenario where there are two variables in main program named `result` and `data`, and we want to multiply the `data` by a number say 6, and store the result in the `result` variable. This sounds simple right? but what we do here is to write the logical code as an external configuration data not directly in the program, yes it is data not code. 
+
+In order to realize this, we need the program to have the ability to parse the configuration data with logic into some thing can be executed,say bytecode, and the bytecode can intereact with the main program by accessing the two variables,`result` and `data`. The following steps show how to do it.
+
 1. Initilizatize the parser and the executor
 ```c
  parser_init();  
