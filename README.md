@@ -47,6 +47,9 @@ run_code(code);
 ```
 When excution is done, the ***result*** ,in the main program, will have a value of 6, given ***data*** is 1.
 
+# link
+There is a project named [satellite-borne-device-management](https://github.com/Gyumeijie/satellite-borne-device-management) uses this embedded interpreter to configure the program.
+
 # todo 
 - [ ] redesign the APIs for more usablity.
 > Mainly center on seperating dependency variable info into two parts, the first part is static decalrative info 
@@ -55,3 +58,4 @@ When excution is done, the ***result*** ,in the main program, will have a value 
 - [ ] refactor code for more Maintainability.
 - [ ] support more grammar.
 - [ ] add safety check for accessing dependency variable(s) in code block.
+
