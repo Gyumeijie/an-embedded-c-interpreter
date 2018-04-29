@@ -8,7 +8,7 @@ This tiny embedded c interpreter is mainly composed of four parts:
 - parser
 - executor
 
-# usage
+# example
 Suppose a scenario where there are two variables in main program named `result` and `data`, and we want to multiply the `data` by a number say 6, and store the result in the `result` variable. This sounds simple right? but what we do here is to write the logical code as an external configuration data not directly in the program, yes it is data not code. 
 
 In order to realize this, we need the program to have the ability to parse the configuration data with logic into some thing can be executed,say bytecode, and the bytecode can intereact with the main program by accessing the two variables,`result` and `data`. The following steps show how to do it.
@@ -50,6 +50,24 @@ int* code = compile_src_code(dep_itemsp, src);
 run_code(code);
 ```
 When excution is done, the ***result*** ,in the main program, will have a value of 6, given ***data*** is 1.
+
+# usage
+1. dowload the repository
+```bash
+git clone https://github.com/Gyumeijie/an-embedded-c-interpreter.git
+```
+2. cd into the `an-embedded-c-interpreter` directory
+```bash
+cd an-embedded-c-interpreter
+```
+3. type `make` command
+```bash
+make
+```
+4. run the code
+```bash
+./main
+```
 
 # link
 There is a project named [satellite-borne-device-management](https://github.com/Gyumeijie/satellite-borne-device-management) uses this embedded interpreter to configure the program.
